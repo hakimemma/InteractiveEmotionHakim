@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 38983875}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.01, z: 0}
+  m_LocalPosition: {x: 0, y: -1.86, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1862231716}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 185778676}
   - component: {fileID: 185778675}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: POEM EXTRACT 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -750,7 +750,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: I HATE RADEAH
 --- !u!222 &850655753
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -969,9 +969,12 @@ GameObject:
   - component: {fileID: 1862231715}
   - component: {fileID: 1862231717}
   - component: {fileID: 1862231718}
+  - component: {fileID: 1862231719}
+  - component: {fileID: 1862231720}
+  - component: {fileID: 1862231721}
   m_Layer: 0
   m_Name: first person player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1002,8 +1005,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1862231714}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.1865463, y: 7.3824, z: -1.7282085}
-  m_LocalScale: {x: 1.4662476, y: 1.9005646, z: 1.4875082}
+  m_LocalPosition: {x: 2.1865463, y: 8, z: -1.7282085}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 963194228}
   - {fileID: 38983876}
@@ -1040,10 +1043,59 @@ BoxCollider:
   m_GameObject: {fileID: 1862231714}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1862231719
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862231714}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &1862231720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862231714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e33601eab22bad7428c998d1e69ab44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerHeight: {fileID: 1862231715}
+  playerCol: {fileID: 1862231721}
+  normalHeight: 1.5
+  crouchHeight: 0.75
+  player: {fileID: 1862231716}
+  offset: {x: 0, y: 0, z: 0}
+  crouched: 0
+--- !u!136 &1862231721
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1862231714}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 3.365956
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.173691, z: 0}
 --- !u!1 &2003549235
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,13 +13,17 @@ public class showui : MonoBehaviour
     // Update is called once per frame
     void OnTriggerEnter (Collider player)
     {
-      if (player.gameObject.tag == "player")  
+     
+
+      if (player.gameObject.tag == "Player")  
       {
-       uiObject.SetActive(true);
-       StartCoroutine("WaitForSec");
+         
+        uiObject.SetActive(true);
+        StartCoroutine("WaitForSec");
     
       }  
     }
+
     IEnumerator WaitForSec()
     {
        yield return new WaitForSeconds(5);

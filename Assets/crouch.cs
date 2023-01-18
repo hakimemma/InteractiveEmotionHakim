@@ -7,7 +7,8 @@ public class crouch : MonoBehaviour
     public CharacterController PlayerHeight;
     public CapsuleCollider playerCol;
     public float normalHeight, crouchHeight;
-<<<<<<< HEAD
+
+
     bool Crouching = false;
     
     void Update(){
@@ -27,7 +28,31 @@ public class crouch : MonoBehaviour
     
         
     
-=======
+//
+    public Transform player;
+    public Vector3 offset;
+    public bool crouched;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.C)){
+            crouched = !crouched;
+            if (crouched)
+            {
+                transform.localScale = new Vector3(transform.localScale.x, crouchHeight, transform.localScale.z);
+                //PlayerHeight.height = crouchHeight;
+                //playerCol.height = crouchHeight;
+                //player.position = player.position + offset;
+
+            } else
+            {
+                transform.localScale = new Vector3(transform.localScale.x, normalHeight, transform.localScale.z);
+                //PlayerHeight.height = normalHeight;
+                //playerCol.height = normalHeight;
+            }
+            
+        }
+//
     public Transform player;
     public Vector3 offset;
     public bool crouched;
@@ -57,14 +82,5 @@ public class crouch : MonoBehaviour
 
     }    
 
-
-
-
-
-
-
-
-
->>>>>>> 874b5be0b9e6704823a9612043b0a03676555176
 }
 

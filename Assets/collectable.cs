@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class collectable : MonoBehaviour
 {
-    public static event Action OnCollected;
+    public TextMeshProUGUI Collected;
+    public int amount = 0;
 
     // Update is called once per frame
     void Update()
@@ -12,20 +15,21 @@ public class collectable : MonoBehaviour
       transform.localRotation = Quaternion.Euler(90f, Time.time * 100f,0);
     }
 
-     
-    void OnTriggerEnter(Collider other)
+
+    private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.tag == "Player")
         {
-            OnCollected?.Invoke();
-            Destroy(gameObject);
-
+            if (Input.GetKey(KeyCode.E))
+            {
+                amount++;
+                Collected.text = "Collected:" + amount;
+                Destroy(gameObject);
+                Debug.Log("Added");
+            }
+            Debug.Log("This is a player");
         }
-
-
-
-
-
-    }  
+        Debug.Log("Entered Trigger");
+    }
 }
 

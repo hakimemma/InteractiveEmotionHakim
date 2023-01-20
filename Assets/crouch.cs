@@ -3,15 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class crouch : MonoBehaviour
-{
+{   bool Crouching = false;
     public CharacterController PlayerHeight;
     public CapsuleCollider playerCol;
     public float normalHeight, crouchHeight;
-
-
-    bool Crouching = false;
- 
-
     public Transform player;
     public Vector3 offset;
     public bool crouched;

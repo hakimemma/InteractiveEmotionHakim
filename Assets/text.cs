@@ -4,33 +4,44 @@ using UnityEngine;
 
 public class text : MonoBehaviour
 {
- 
+    PlayerMovement pm;
     public GameObject uiObject;
+    bool setTimer = false;
+    float time = 5.0f;
+
     void Start()
     {
-     uiObject.SetActive(false);   
+        pm = FindObjectOfType<PlayerMovement>();
+        uiObject.SetActive(false);   
+    }
+
+    private void Update()
+    {
+        if (setTimer == true)
+        {
+            time = time - Time.deltaTime;
+        }
+
+        if (time < 0f)
+        {
+            pm.playerMovement = true;
+            Debug.Log("I am running");
+            Destroy(gameObject);
+            Destroy(uiObject);
+        }
     }
 
     // Update is called once per frame
-    void OnTriggerEnter (Collider player)
+    void OnTriggerEnter(Collider player)
     {
-     
-
-      if (player.gameObject.tag == "Player")  
-      {
-         
-        uiObject.SetActive(true);
-        StartCoroutine("WaitForSec");
-    
-      }  
+        if (player.gameObject.tag == "Player")
+        {
+            pm.playerMovement = false;
+            uiObject.SetActive(true);
+            setTimer = true;
+        }
     }
 
-    IEnumerator WaitForSec()
-    {
-       yield return new WaitForSeconds(5);
-       Destroy(uiObject);
-       Destroy(gameObject);
-    }
 }   
 
 

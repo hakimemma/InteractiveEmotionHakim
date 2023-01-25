@@ -13,5 +13,17 @@ public class portal : MonoBehaviour
         var direction = destination.TransformDirection(Vector3.forward);
         Gizmos.DrawRay(destination.position, direction);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("COLLIDING");
+        if (other.gameObject.tag == "Player")
+        {
+            Debug.Log("player");
+            other.gameObject.GetComponent<CharacterController>().enabled = false;
+            other.transform.position = destination.position;
+            other.gameObject.GetComponent<CharacterController>().enabled = true;
+        }
+    }
 }
    

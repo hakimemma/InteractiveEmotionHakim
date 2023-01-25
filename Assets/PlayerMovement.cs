@@ -16,6 +16,9 @@ public class PlayerMovement : MonoBehaviour
 
     bool isGrounded;
     public bool playerMovement = true;
+    public float mouseSensitivity = 100f;
+
+    float xRotation = 0f;
 
     private void Start()
     {
@@ -27,6 +30,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (playerMovement)
         {
+            float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+            xRotation += mouseX;
+
+            transform.rotation = Quaternion.Euler(0f, xRotation, 0f);
+
             isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
             float x = Input.GetAxis("Horizontal");

@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
         if (playerMovement)
         {
             float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-            xRotation +ddd= mouseX;
+            xRotation += mouseX;
 
             transform.rotation = Quaternion.Euler(0f, xRotation, 0f);
 

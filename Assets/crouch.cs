@@ -30,9 +30,6 @@ public class crouch : MonoBehaviour
             }
             
         }
-        if (Input.GetKeyDown(KeyCode.C)){
-            
-        } 
 
     }    
 

@@ -6,17 +6,14 @@ public class portal2 : MonoBehaviour
 {
 
     [SerializeField] Transform destination;
+    public Transform player;
+    //PlayerMovement pc;
 
     void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player")) && other.TryGetComponent<Player>(out var player))
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.white;
-        Gizmos.DrawWireSphere(destination.position, .4f);
-        var direction = destination.TransformDirection(Vector3.forward);
-        Gizmos.DrawRay(destination.position, direction);
+        if(other.CompareTag("Player"))
+        {
+            player.transform.position = destination.transform.position;
+        }
     }
 }

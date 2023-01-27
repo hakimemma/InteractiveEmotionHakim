@@ -51,14 +51,14 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    public void Teleport(Vector3 position, Quaternion rotation)
-    {
-        transform.position = position;
-        Physics.SyncTransforms();
-        look.x = rotation.eulerAngles.y;
-        look.y = rotation.eulerAngles.z;
-        velocity = Vector3.zero;
-    }
+    //public void Teleport(Vector3 position, Quaternion rotation)
+    //{
+    //    transform.position = position;
+    //    Physics.SyncTransforms();
+    //    look.x = rotation.eulerAngles.y;
+    //    look.y = rotation.eulerAngles.z;
+    //    velocity = Vector3.zero;
+    //}
 
 }   
     

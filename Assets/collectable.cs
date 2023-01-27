@@ -8,27 +8,44 @@ public class collectable : MonoBehaviour
 {
     public TextMeshProUGUI Collected;
     public int amount = 0;
+    public GameObject wall;
+    // Start is called before the first frame update
+    void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
     {
-     transform.localRotation = Quaternion.Euler(90f, Time.time * 100f,0);
+        transform.localRotation= Quaternion.Euler(90f,Time.time*100f,0);
     }
-
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.tag == "Player")
+        if(other.tag == "Player")
         {
-            if (Input.GetKey(KeyCode.E))
+            if(Input.GetKey(KeyCode.E))
             {
-                amount++;
-                Collected.text = "Collected:" + amount;
-                Destroy(gameObject);
-                Debug.Log("Added");
+                if(amount == 5)
+                {
+                    DestroyWall();
+                }
+                else
+                {
+                    amount += amount + 1;
+                    amount = amount;
+                    Collected.text = "Collected " + amount;
+                    Destroy(gameObject);
+                    Debug.Log("Added");
+                    Debug.Log(amount);
+                }
             }
-            Debug.Log("This is a player");
         }
     }
-}
+    void DestroyWall()
+    {        
+        Destroy(wall);
+    } 
+} 
 

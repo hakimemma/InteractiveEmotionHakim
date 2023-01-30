@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
+    public float gravity = 9.8f;
 
     bool isGrounded;
     public bool playerMovement = true;

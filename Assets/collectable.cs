@@ -47,5 +47,7 @@ public class collectable : MonoBehaviour
     {        
         Destroy(wall);
     } 
-} 
+}
+
+
 

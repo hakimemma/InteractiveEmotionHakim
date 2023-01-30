@@ -3087,7 +3087,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 221129511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 20.66, y: 2.6952999, z: 1.6}
+  m_LocalPosition: {x: 20.66, y: 26.3, z: 1.6}
   m_LocalScale: {x: -7.558272, y: 4.3489637, z: -24.06121}
   m_Children: []
   m_Father: {fileID: 0}
@@ -23516,7 +23516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 0}
-  speed: 20
+  speed: 45.71
   groundCheck: {fileID: 38983876}
   groundDistance: 0.4
   groundMask:
@@ -25340,8 +25340,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -12,7 +12,7 @@ public class collectable : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        amount = 0;
     }
 
     // Update is called once per frame
@@ -31,10 +31,9 @@ public class collectable : MonoBehaviour
                 {
                     DestroyWall();
                 }
-                else
+                else if(amount < 5)
                 {
-                    amount += amount + 1;
-                    amount = amount;
+                    amount = amount + 1;
                     Collected.text = "Collected " + amount;
                     Destroy(gameObject);
                     Debug.Log("Added");

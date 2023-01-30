@@ -7,12 +7,13 @@ using UnityEngine.UI;
 public class collectable : MonoBehaviour
 {
     public TextMeshProUGUI Collected;
-    public int amount = 0;
     public GameObject wall;
+    public KeyCounter counter;
+    
     // Start is called before the first frame update
     void Start()
     {
-        amount = 0;
+        counter = FindObjectOfType<KeyCounter>();
     }
 
     // Update is called once per frame
@@ -27,17 +28,17 @@ public class collectable : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.E))
             {
-                if(amount == 5)
+                if(counter.keyAmount == 5)
                 {
                     DestroyWall();
                 }
-                else if(amount < 5)
+                else if(counter.keyAmount < 5)
                 {
-                    amount = amount + 1;
-                    Collected.text = "Collected " + amount;
+                    counter.keyAmount = counter.keyAmount + 1;
+                    Collected.text = "Collected " + counter.keyAmount;
                     Destroy(gameObject);
                     Debug.Log("Added");
-                    Debug.Log(amount);
+                    Debug.Log(counter.keyAmount);
                 }
             }
         }

@@ -28,7 +28,7 @@ public class collectable : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.E))
             {
-                if(counter.keyAmount < 5)
+                if(counter.keyAmount < 15)
                 {
                     counter.keyAmount = counter.keyAmount + 1;
                     Collected.text = "Collected " + counter.keyAmount;

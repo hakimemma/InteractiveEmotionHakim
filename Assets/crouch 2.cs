@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class crouch : MonoBehaviour
-{ 
-    bool Crouching = false;
-
-    public float normalHeight, crouchHeight;
+public class crouch2 : MonoBehaviour
+{
+    public Transform player;
+    public Vector3 offset;
     public bool crouched;
-
+    public float normalHeight, crouchHeight;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.C)){
+        if (Input.GetKeyDown(KeyCode.C))
+        {
             crouched = !crouched;
             if (crouched)
             {
@@ -19,6 +19,7 @@ public class crouch : MonoBehaviour
                 //PlayerHeight.height = crouchHeight;
                 //playerCol.height = crouchHeight;
                 //player.position = player.position + offset;
+
             }
             else
             {
@@ -26,10 +27,12 @@ public class crouch : MonoBehaviour
                 //PlayerHeight.height = normalHeight;
                 //playerCol.height = normalHeight;
             }
-            
+
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+
         }
 
-    }    
-
+    }
 }
-

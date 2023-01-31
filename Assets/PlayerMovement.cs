@@ -8,12 +8,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Rigidbody rb;
 
+
     public float speed = 12f;
 
     public Transform groundCheck;
     public float groundDistance = 0.4f;
     public LayerMask groundMask;
-    public float gravity = 9.8f;
 
     bool isGrounded;
     public bool playerMovement = true;
@@ -43,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
 
             Vector3 move = transform.right * x + transform.forward * z;
 
-            rb.velocity = (move * speed);
+            rb.velocity = (new Vector3(move.x * speed, rb.velocity.y, move.z * speed));
 
         } else
         {

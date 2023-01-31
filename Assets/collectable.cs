@@ -28,11 +28,7 @@ public class collectable : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.E))
             {
-                if(counter.keyAmount == 5)
-                {
-                    DestroyWall();
-                }
-                else if(counter.keyAmount < 5)
+                if(counter.keyAmount < 5)
                 {
                     counter.keyAmount = counter.keyAmount + 1;
                     Collected.text = "Collected " + counter.keyAmount;
@@ -43,10 +39,6 @@ public class collectable : MonoBehaviour
             }
         }
     }
-    void DestroyWall()
-    {        
-        Destroy(wall);
-    } 
 }
 
 

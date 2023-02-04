@@ -95660,7 +95660,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 8.840157, y: 0, z: -105.68344, w: -6.9216394}
+  m_margin: {x: 8.840157, y: -5.0317802, z: -69.47645, w: -6.9216394}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -122350,6 +122350,7 @@ GameObject:
   - component: {fileID: 543450651662657378}
   - component: {fileID: 3469287837659146439}
   - component: {fileID: 1711813854940453901}
+  - component: {fileID: 919132148013661657}
   m_Layer: 0
   m_Name: wall with window
   m_TagString: Untagged
@@ -122357,6 +122358,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &919132148013661657
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148013661656}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.011851886, y: 0.22150055, z: 0.5005632}
+  m_Center: {x: -4.656614e-10, y: 0.0000000037252903, z: 0}
 --- !u!1 &919132148080567141
 GameObject:
   m_ObjectHideFlags: 0
@@ -134795,6 +134809,7 @@ GameObject:
   - component: {fileID: 6595377238926638328}
   - component: {fileID: 7793662992312447837}
   - component: {fileID: 5461828937337587607}
+  - component: {fileID: 5822217582456563267}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -134802,6 +134817,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &5822217582456563267
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5822217582456563266}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01956327, y: 0.010000001, z: 0.010000004}
+  m_Center: {x: 0, y: -0.0027929565, z: -0.0023823022}
 --- !u!33 &5831319026934297236
 MeshFilter:
   m_ObjectHideFlags: 0
